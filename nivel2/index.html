@@ -118,7 +118,7 @@
     <div class="tag px">★ NIVEL ESPECIAL DESBLOQUEADO ★</div>
     <h2 class="px">Radecita</h2>
     <div class="scene"><canvas id="scene"></canvas></div>
-    <div class="names px"><span>nearvanita</span><span>Radecita</span></div>
+    
   </section>
 
   <section>
@@ -168,7 +168,7 @@
 </main>
 
 <script>
-const D = {"near": ["......WWWWWWWW......", "....WWWWWWWWWWWW....", "...WWWWWWWWWWWWWW...", "..WWWWWWWWWWWWWWWW..", "..WWWWWWWWWWWWWWWW..", "..wwwwwwwwwwwwwwww..", ".WKKKKKKKKKKKKKKKKW.", ".WKKKKSSSSSSKKKKKKW.", "WWHKSSSSSSSSSSSSKHWW", "WWHSSSEESSSSEESSSHWW", "WW.SSSEESSSSEESSS.WW", "WW.SpSSSSSSSSSSpS.WW", "W..SSSSSSKKSSSSSS..W", "W...SSSSSSSSSSSS...W", "......SSSSSSSS......", ".....RRRRRRRRRR.....", "....bRRRRYYRRRRb....", "...SbRRRRRRRRRRbS...", "...S.RRRRRRRRRR.S...", "...S.RRRRRRRRRR.S...", ".....BBBBBBBBBB.....", ".....BBBBBBBBBB.....", "....BBBBB..BBBBB....", "....BBBBB..BBBBB....", "....GGGGG..GGGGG...."], "rade": ["......OOOOOOOO......", "....OOOOOOOOOOOO....", "...OOOOOOOOOOOOOO...", "..OOOOOOOOOOOOOOOO..", "..OOOOOOOOOOOOOOOO..", "..OOOOOOOOOOOOOOOO..", "..OOOOSSSSSSSSOOOO..", "..OOOSSSSSSSSSSOOO..", "..OOSLLLLSSLLLLSOO..", "..OOSLEgLLLLEgLSOO..", "..OOSSLLSSSSLLSSOO..", "..OOSpSSSSSSSSpSOO..", "..OOSSSSSKKSSSSSOO..", "..OOOSSSSSSSSSSOOO..", "..OOOOOSSSSSSOOOOO..", "..OOOJJJTTTTJJJOOO..", "..OOJJJJTTTTJJJJOO..", "..OSJJJJTTTTJJJJSO..", "..OSJJJJTTTTJJJJSO..", "...SJJJJTTTTJJJJS...", ".....PPPPPPPPPP.....", ".....PPPPPPPPPP.....", "....PPPPP..PPPPP....", "....DDDDD..DDDDD....", "....DDDDD..DDDDD...."], "pal": {"W": "#f4f1ea", "w": "#cfc9bd", "K": "#1d1a22", "S": "#f6d7b8", "E": "#1d1a22", "H": "#e9e9ee", "R": "#d7263d", "Y": "#f2c230", "b": "#2b4fa8", "B": "#6f8fc4", "G": "#e8e8e8", "O": "#e8642a", "L": "#141414", "J": "#1f1f24", "T": "#2bb3a8", "P": "#2a2a30", "D": "#111114", "g": "#d8eef7", "p": "#f4a3a8"}, "heart": [".RR.RR.", "RRRRRRR", "RRRRRRR", ".RRRRR.", "..RRR..", "...R..."]};
+const D = {"near": ["......WWWWWWWW......", "....WWWWWWWWWWWW....", "...WWWWWWWWWWWWWW...", "..WWWWWWWWWWWWWWWW..", "..WWWWWWWWWWWWWWWW..", "..wwwwwwwwwwwwwwww..", ".WKKKKKKKKKKKKKKKKW.", ".WKKKKSSSSSSKKKKKKW.", "WWHKSSSSSSSSSSSSKHWW", "WWHSSSEESSSSEESSSHWW", "WW.SSSEESSSSEESSS.WW", "WW.SpSSSSSSSSSSpS.WW", "W..SSSSSSKKSSSSSS..W", "W...SSSSSSSSSSSS...W", "......SSSSSSSS......", ".....RRRRRRRRRR.....", "....bRRRRYYRRRRb....", "...SbRRRRRRRRRRbS...", "...S.RRRRRRRRRR.S...", "...S.RRRRRRRRRR.S...", ".....BBBBBBBBBB.....", ".....BBBBBBBBBB.....", "....BBBBB..BBBBB....", "....BBBBB..BBBBB....", "....GGGGG..GGGGG...."], "rade": ["......OOOOOOOO......", "....OOOOOOOOOOOO....", "...OOOOOOOOOOOOOO...", "..OOOOOOOOOOOOOOOO..", "..OOOOOOOOOOOOOOOO..", "..OOOOOOOOOOOOOOOO..", "..OOOOSSSSSSSSOOOO..", "..OOOSSSSSSSSSSOOO..", "..OOSLLLLSSLLLLSOO..", "..OOSLEgLLLLEgLSOO..", "..OOSLggLSSLggLSOO..", "..OOSpLLSSSSLLpSOO..", "..OOSSSSSKKSSSSSOO..", "..OOOSSSSSSSSSSOOO..", "..OOOOOSSSSSSOOOOO..", "..OOOJJJYTTTJJJOOO..", "..OOJJJJYTTTJJJJOO..", "..OSJJJJTYTTJJJJSO..", "..OSJJJJTYTTJJJJSO..", "...SJJJJTTYTJJJJS...", ".....PPPPPPPPPP.....", ".....PPPPPPPPPP.....", "....PPPPP..PPPPP....", "....DDDDD..DDDDD....", "....DDDDD..DDDDD...."], "pal": {"W": "#f4f1ea", "w": "#cfc9bd", "K": "#1d1a22", "S": "#f6d7b8", "E": "#1d1a22", "H": "#e9e9ee", "R": "#d7263d", "Y": "#f2c230", "b": "#2b4fa8", "B": "#6f8fc4", "G": "#e8e8e8", "O": "#e8642a", "L": "#141414", "J": "#1f1f24", "T": "#2bb3a8", "P": "#2a2a30", "D": "#111114", "g": "#d8eef7", "p": "#f4a3a8", "Q": "#e02020", "C": "#eeeeee", "c": "#9a9a9a", "n": "#f4a3a8"}, "heart": [".RR.RR.", "RRRRRRR", "RRRRRRR", ".RRRRR.", "..RRR..", "...R..."], "badge": [".QQQQQ.", "QcCCCcQ", "QCKCKCQ", "QCCnCCQ", "QcCCCcQ", ".QQQQQ."]};
 
 /* ---------- utilidades de pixel art ---------- */
 function drawSprite(ctx, map, x, y, s, palOverride){
@@ -193,38 +193,101 @@ function drawSprite(ctx, map, x, y, s, palOverride){
     e.style.animationDelay=(Math.random()*2.5)+'s';st.appendChild(e);}
 })();
 
-/* ---------- escena animada ---------- */
-const sc=document.getElementById('scene'), W=96, H=60; sc.width=W; sc.height=H;
-const sx=sc.getContext('2d');
-const flowers=[[8,46,'#ff4d4d'],[14,49,'#ffffff'],[22,47,'#ffd23f'],[74,47,'#9b6bff'],[82,49,'#5fb8ff'],[89,46,'#ff4d4d']];
-const clouds=[[6,6],[52,10],[80,4]];
+/* ---------- escena de cine: lobby al atardecer ---------- */
+const sc=document.getElementById('scene'), VW=320, VH=180; sc.width=VW; sc.height=VH;
+const sx=sc.getContext('2d'); sx.imageSmoothingEnabled=false;
+const WW=160, WH=90, world=document.createElement('canvas'); world.width=WW; world.height=WH;
+const wx=world.getContext('2d');
+const NX=56, RX=84, FY=74;                    // posición de los personajes (pies en FY)
+const rnd=(()=>{let a=7;return()=>(a=(a*16807)%2147483647)/2147483647;})();
+const stars=[...Array(40)].map(()=>[rnd()*WW|0,rnd()*34|0,rnd()*6]);
+const city=[];{let x=0;while(x<WW){const w=6+(rnd()*10|0),h=6+(rnd()*14|0);const win=[];
+  for(let yy=3;yy<h-2;yy+=3)for(let xx=1;xx<w-1;xx+=2) if(rnd()<.35) win.push([xx,yy]);
+  city.push([x,w,h,win]);x+=w+(rnd()*3|0);}}
+const flies=[...Array(10)].map(()=>({x:rnd()*WW,y:40+rnd()*30,p:rnd()*6}));
+const bulbs=['#ff4d6d','#ffd23f','#2bd1c2','#b994ff','#ff7a3d'];
 let floaters=[];
-function scene(t){
-  // cielo
-  for(let y=0;y<34;y++){const k=y/34;sx.fillStyle=`rgb(${120+40*k|0},${190+20*k|0},${245})`;sx.fillRect(0,y,W,1);}
-  // nubes
-  sx.fillStyle='#fff';
-  clouds.forEach(([cx,cy],i)=>{const x=((cx+t*0.004*(i+1))%(W+20))-14;
-    sx.fillRect(x,cy+2,14,3);sx.fillRect(x+3,cy,8,2);sx.fillRect(x+2,cy+5,10,1);});
-  // pasto
-  sx.fillStyle='#4fc25a';sx.fillRect(0,34,W,H-34);
-  sx.fillStyle='#43ad4e';for(let i=0;i<W;i+=4)sx.fillRect(i,34+(i%8?0:1),2,1);
-  // plataforma amarilla
-  sx.fillStyle='#e6b800';sx.fillRect(18,50,60,8);sx.fillStyle='#ffd23f';sx.fillRect(18,49,60,8);
-  sx.fillStyle='#3a3020';for(let i=22;i<76;i+=8)sx.fillRect(i,52,4,1);
-  // flores
-  flowers.forEach(([x,y,c])=>{sx.fillStyle='#2e8b3a';sx.fillRect(x+1,y+2,1,4);
-    sx.fillStyle=c;sx.fillRect(x,y,3,3);sx.fillStyle='#ffe066';sx.fillRect(x+1,y+1,1,1);});
-  // personajes (rebotan un poquito)
+function lobby(t){
+  const T=t/1000;
+  // cielo de atardecer
+  const sky=[[0,'#1d1440'],[18,'#3a2370'],[34,'#7a3b8f'],[46,'#d9577a'],[56,'#ff8a5c'],[62,'#ffc06b']];
+  for(let y=0;y<62;y++){let i=0;while(i<sky.length-1&&sky[i+1][0]<=y)i++;wx.fillStyle=sky[i][1];wx.fillRect(0,y,WW,1);}
+  stars.forEach(([x,y,p])=>{ if(Math.sin(T*2+p)>-.3){wx.fillStyle='#fff';wx.fillRect(x,y,1,1);} });
+  // sol
+  wx.fillStyle='#ffe08a';for(let dy=-10;dy<=10;dy++){const w=Math.round(Math.sqrt(100-dy*dy));if(48+dy<62)wx.fillRect(124-w,48+dy,w*2,1);}
+  wx.fillStyle='#ffb35c';for(let y=50;y<58;y+=3)wx.fillRect(114,y,20,1);
+  // ciudad
+  city.forEach(([x,w,h,win])=>{wx.fillStyle='#2a1640';wx.fillRect(x,62-h,w,h);
+    win.forEach(([a,b],k)=>{wx.fillStyle=((k+Math.floor(T/2))%7)?'#ffd86b':'#2a1640';wx.fillRect(x+a,62-h+b,1,1);});});
+  // azotea (el lobby)
+  wx.fillStyle='#3b2a5c';wx.fillRect(0,62,WW,28);
+  wx.fillStyle='#4a3670';for(let y=64;y<WH;y+=4)wx.fillRect(0,y,WW,1);
+  for(let x=0;x<WW;x+=10)wx.fillRect(x+(Math.floor(x/10)%2?5:0),62,1,28);
+  wx.fillStyle='#ff7a3d';wx.fillRect(0,62,WW,1);
+  // alfombra donde están ellos
+  wx.fillStyle='#ffd23f';wx.fillRect(44,73,64,5);wx.fillStyle='#e6b800';wx.fillRect(44,77,64,1);
+  wx.fillStyle='#ff4d6d';for(let x=46;x<106;x+=6)wx.fillRect(x,75,2,1);
+  // postes y guirnalda de luces
+  wx.fillStyle='#1a1030';wx.fillRect(30,34,2,40);wx.fillRect(128,34,2,40);
+  for(let x=32;x<128;x+=2){const y=34+Math.round(10*Math.sin(Math.PI*(x-32)/96));wx.fillStyle='#1a1030';wx.fillRect(x,y,2,1);
+    if(x%8===0){const on=((x/8)+Math.floor(T*3))%3!==0;wx.fillStyle=on?bulbs[(x/8)%5]:'#3a2a50';wx.fillRect(x,y+1,2,2);}}
+  // macetas con flores
+  [[36,'#ff4d6d'],[40,'#ffd23f'],[114,'#b994ff'],[118,'#2bd1c2']].forEach(([x,c])=>{
+    wx.fillStyle='#b5562c';wx.fillRect(x,70,4,4);wx.fillStyle='#2e8b3a';wx.fillRect(x+1,66,1,4);wx.fillRect(x+2,67,1,3);
+    wx.fillStyle=c;wx.fillRect(x,64,3,3);wx.fillStyle='#fff3a0';wx.fillRect(x+1,65,1,1);});
+  // luciérnagas
+  flies.forEach(f=>{const x=(f.x+Math.sin(T*.6+f.p)*6)|0,y=(f.y+Math.cos(T*.8+f.p)*4)|0;
+    if(Math.sin(T*3+f.p*2)>0){wx.fillStyle='#fff6a0';wx.fillRect(x,y,1,1);}});
+  // personajes con rebote y parpadeo
   const b1=Math.round(Math.sin(t/300)*0.6), b2=Math.round(Math.sin(t/300+1.6)*0.6);
-  drawSprite(sx,D.near,24,24+b1,1);
-  drawSprite(sx,D.rade,52,24+b2,1);
-  // corazones flotando entre los dos
-  if(Math.random()<0.03) floaters.push({x:44+Math.random()*8,y:30,v:0.08+Math.random()*0.06,life:0});
-  floaters=floaters.filter(f=>f.y>-8);
-  floaters.forEach(f=>{f.y-=f.v;f.life++;drawSprite(sx,D.heart,Math.round(f.x+Math.sin(f.life/20)*2),Math.round(f.y),1,{R:'#ff4d6d'});});
-  // corazón fijo entre los dos
-  if(Math.floor(t/600)%2===0) drawSprite(sx,D.heart,45,18,1,{R:'#ff4d6d'});
+  const ny=FY-25+b1, ry=FY-25+b2;
+  drawSprite(wx,D.near,NX-10,ny,1); drawSprite(wx,D.badge,NX+5,ny+14,1);
+  drawSprite(wx,D.rade,RX-10,ry,1);
+  if(T%3.4<0.15){ wx.fillStyle=D.pal.S;[[6,9],[12,9]].forEach(([c,r])=>{wx.fillRect(NX-10+c,ny+r,2,2);});
+    wx.fillStyle='#1d1a22';wx.fillRect(NX-10+6,ny+10,2,1);wx.fillRect(NX-10+12,ny+10,2,1); }
+  if((T+1.7)%3.9<0.15){ wx.fillStyle=D.pal.g;wx.fillRect(RX-10+6,ry+9,2,1);wx.fillRect(RX-10+12,ry+9,2,1); }
+  // corazones entre los dos
+  if(Math.random()<0.03) floaters.push({x:66+Math.random()*6,y:52,v:0.06+Math.random()*0.05,life:0});
+  floaters=floaters.filter(f=>f.y>20);
+  floaters.forEach(f=>{f.y-=f.v;f.life++;drawSprite(wx,D.heart,Math.round(f.x+Math.sin(f.life/20)*2),Math.round(f.y),1,{R:'#ff4d6d'});});
+}
+
+/* cámara: [segundo, centroX, centroY, zoom, texto] */
+const SHOTS=[
+  [0,   80,45,1,   ''],
+  [3,   80,45,1,   ''],
+  [6,   NX,FY-14,3.2,'nearvanita'],
+  [9.5, NX,FY-14,3.2,'nearvanita'],
+  [12,  RX,FY-14,3.2,'Radecita'],
+  [15.5,RX,FY-14,3.2,'Radecita'],
+  [18,  70,FY-18,2,  'nearvanita ♥ Radecita'],
+  [21,  70,FY-18,2,  'nearvanita ♥ Radecita'],
+  [24,  80,45,1,   '']
+];
+const LOOP=24, ease=k=>k<.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2;
+function camAt(s){
+  for(let i=0;i<SHOTS.length-1;i++){const a=SHOTS[i],b=SHOTS[i+1];
+    if(s>=a[0]&&s<=b[0]){const k=ease((s-a[0])/(b[0]-a[0]||1));
+      return {x:a[1]+(b[1]-a[1])*k,y:a[2]+(b[2]-a[2])*k,z:a[3]+(b[3]-a[3])*k,txt:(a[4]&&a[4]===b[4])?a[4]:(k<.5?a[4]:b[4]),hold:a[4]===b[4]&&a[4]!==''};}}
+  return {x:80,y:45,z:1,txt:'',hold:false};
+}
+let camStart=null;
+function scene(t){
+  if(camStart===null) camStart=t;
+  lobby(t);
+  const s=((t-camStart)/1000)%LOOP, c=camAt(s);
+  const sw=WW/c.z, sh=WH/c.z;
+  const x0=Math.max(0,Math.min(WW-sw,c.x-sw/2)), y0=Math.max(0,Math.min(WH-sh,c.y-sh/2));
+  sx.drawImage(world,x0,y0,sw,sh,0,0,VW,VH);
+  // barras de cine
+  const bar=Math.round(16*Math.min(1,(c.z-1)/0.6+ (s<1?0:0)));
+  sx.fillStyle='#000';sx.fillRect(0,0,VW,bar);sx.fillRect(0,VH-bar,VW,bar);
+  // texto del plano
+  if(c.txt && bar>10){
+    sx.font='8px "Press Start 2P", monospace';sx.textAlign='center';sx.textBaseline='middle';
+    sx.fillStyle=c.txt==='Radecita'?'#5fb8ff':(c.txt==='nearvanita'?'#b994ff':'#ffd23f');
+    sx.fillText(c.txt,VW/2,VH-bar/2);
+  }
   requestAnimationFrame(scene);
 }
 requestAnimationFrame(scene);
