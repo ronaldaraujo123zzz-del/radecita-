@@ -69,6 +69,24 @@
   .chat .n{color:#b994ff}.chat .r{color:#5fb8ff}.chat .sys{color:#ddd;font-weight:600;font-size:.85em}
   .note{margin-top:16px;font-size:16px;color:var(--muted);font-weight:600}
 
+  /* ---------- retos ---------- */
+  .sub{text-align:center;color:var(--muted);font-weight:600;margin:-6px 0 18px}
+  .reto{position:relative;background:var(--bg2);border:4px solid #000;box-shadow:5px 5px 0 #000;border-radius:6px;padding:16px 14px;
+    display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:12px;min-height:170px;text-align:center}
+  .reto .lvl{font-family:'Press Start 2P';font-size:8px;color:var(--teal)}
+  .reto .em{font-size:30px}
+  .reto p{font-weight:800;font-size:16px;line-height:1.35}
+  .reto button{font-family:'Press Start 2P';font-size:9px;padding:10px 12px;border:3px solid #000;box-shadow:3px 3px 0 #000;
+    background:var(--yellow);color:#2a1a00;cursor:pointer;border-radius:3px}
+  .reto button:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #000}
+  .reto .stamp{position:absolute;left:0;right:0;bottom:16px;display:none;justify-content:center;pointer-events:none}
+  .reto .stamp span{font-family:'Press Start 2P';font-size:10px;color:var(--teal);border:3px solid var(--teal);padding:8px 10px;
+    transform:rotate(-6deg);background:#1a1430;border-radius:4px}
+  .reto.ok{border-color:var(--teal)}
+  .reto.ok .stamp{display:flex;animation:pop .35s ease-out}
+  .reto.ok button{visibility:hidden}
+  @keyframes pop{0%{transform:scale(2);opacity:0}100%{transform:scale(1);opacity:1}}
+
   /* ---------- final ---------- */
   .final{text-align:center}
   .final h3{font-size:clamp(13px,3.6vw,17px);line-height:1.9;color:var(--yellow);margin-bottom:26px}
@@ -125,6 +143,13 @@
       </div>
       <p class="note">Y yo, como siempre, esperándote jajaja 😤💛</p>
     </div>
+  </section>
+
+  <section>
+    <div class="title px" style="text-align:center">Retos para Radecita</div>
+    <p class="sub">Misión: dejar lo amargada 😤 (poquito a poquito)</p>
+    <div class="grid" id="retos"></div>
+    <div class="hint px" id="retoCount">0 / 6 retos aceptados</div>
   </section>
 
   <section class="final">
@@ -260,6 +285,29 @@ LIKES.forEach(([e,t],i)=>{
   b.innerHTML=`<div class="in"><div class="f"><span>❓</span><small>CARTA ${i+1}</small></div><div class="b"><span style="font-size:30px">${e}</span>${t}</div></div>`;
   b.onclick=()=>{b.classList.toggle('flip'); if(b.classList.contains('flip')) beep([[660,.08],[990,.12]]);};
   lg.appendChild(b);
+});
+
+/* ---------- retos ---------- */
+const RETOS=[
+  ['💬','Mañana me hablas tú primero'],
+  ['🥺','Háblame lindo por un día entero'],
+  ['📸','Mándame un snap'],
+  ['😤','Un día completo sin ser amargada'],
+  ['🎮','Hoy tú eliges a qué jugamos en Roblox'],
+  ['💛','Dime una cosa que te guste de mí'],
+];
+let aceptados=0;
+const rg=document.getElementById('retos'), rc=document.getElementById('retoCount');
+RETOS.forEach(([e,t],i)=>{
+  const d=document.createElement('div'); d.className='reto';
+  d.innerHTML=`<div class="lvl">RETO ${i+1}</div><div class="em">${e}</div><p>${t}</p><button>ACEPTO</button><div class="stamp"><span>¡ACEPTADO!</span></div>`;
+  d.querySelector('button').onclick=()=>{
+    d.classList.add('ok'); aceptados++;
+    rc.textContent = aceptados<RETOS.length ? `${aceptados} / ${RETOS.length} retos aceptados` : '¡TODOS ACEPTADOS! 🏆';
+    if(aceptados===RETOS.length){ beep([[523,.1],[659,.1],[784,.1],[1047,.3]]); burst(60); }
+    else beep([[784,.07],[1175,.12]]);
+  };
+  rg.appendChild(d);
 });
 
 /* ---------- chat ---------- */
